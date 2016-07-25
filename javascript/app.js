@@ -23,5 +23,9 @@ angular.module('moviesDBApp', ['ngRoute','movieDBControllers','movieDBDirectives
 			templateUrl: "templates/movies.html",
 			controller: "MovieNowPlayingController"
 		})
+		  .when("/about", {
+		  	templateUrl: "templates/about.html",
+		  	controller: "AboutController"
+		  })
 		  .otherwise({redirectTo: '/popular'}); 
 	});
