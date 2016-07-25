@@ -1,3 +1,9 @@
+body {
+	background-color:silver;
+}
+
+/* Navbar Style */
+
 movie-nav .list-inline>li {
 	padding:10px 15px;
 }
@@ -16,6 +22,9 @@ movie-nav .list-inline > li > a:active {
 	color:white;
 }
 
+
+/*About Map Style */ 
+
 .map-container {
 	position:relative;
 }
@@ -31,8 +40,88 @@ movie-nav .list-inline > li > a:active {
 	opacity: 0.8;
 }
 
-select {
+select {		/* Dropdown selector menu <select> */
 	padding: 0.5em;
 	border-radius:5px;
 	font-size:1.4em;
+}
+
+/* Home Page Style */
+
+.btn-link {
+	border:3px solid grey;
+	padding:5px;
+	margin:60px;
+	font-size:large;
+	text-decoration:none;
+	color:grey;
+}
+
+.btn-link:hover {
+	border:3px solid grey;
+	padding:5px;
+	margin:60px;
+	font-size:large;
+	color:red;
+}
+
+div.home-page {
+	background: transparent(0.8);
+	font-size:large;
+	text-align: center;
+}
+
+div.home-page:hover a {
+	color:red;
+}
+
+div.home-page h1 {
+	background: transparent;
+	font-size:300%;
+	margin-bottom:45px;
+}
+
+div.home-page img {
+	animation-name:dropDown;
+	animation-duration:5s;
+}
+
+@keyframes dropDown {
+	from {top:0px;}
+	to {top:200px;}
+}
+
+
+/*Movies Style/ Responsiveness */
+
+div.repeat:nth-child(6n+0):after {
+	display:table;
+	content:" ";
+	clear:both;
+} 
+
+div.repeat:nth-child(6n+1) {
+	clear:both;
+}
+
+/* Portrait tablets and small desktops  col-sm*/
+@media (min-width: 768px) and (max-width: 991px) {
+   div.repeat:nth-child(3n+1){ clear: both}
+}
+ 
+/* Landscape phones and portrait tablets  col-xs*/
+@media (max-width: 767px) {
+  div.repeat:nth-child(2n+1){ clear: both}
+ 
+}
+ 
+/* Portrait phones and smaller  col-xs*/
+@media (max-width: 480px) {
+  div.repeat:nth-child(2n+1) { clear: both}
+ 
+}
+
+/*Movies-Info-Box Style*/
+div.repeat {
+	height:80%;
 }
